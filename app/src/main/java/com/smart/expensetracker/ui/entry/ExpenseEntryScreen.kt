@@ -179,7 +179,7 @@ fun ExpenseEntryScreen(
                         value = uiState.notes,
                         onValueChange = viewModel::updateNotes,
                         label = "Notes",
-                        placeholder = "Optional notes (max 100 characters)"
+                        placeholder = "Notes (max 100 characters)"
                     )
 
                     Spacer(modifier = Modifier.height(16.dp))
