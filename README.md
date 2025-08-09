@@ -11,8 +11,9 @@ The app includes three screens: Expense Entry, Expense List with grouping/filter
 - AI helped me polish the project by pointing out improvements like aligning category constants, unifying currency formats, and handling “today” based on local time. It even assisted in drafting this README.
 
 ### Prompt Logs (key prompts)
-- "this is how i wrote the prompt for designing in figma:\nDesign a modern mobile app UI in Material You style for a “Smart Daily Expense Tracker” targeted at small business owners. The app should have three main screens: 1. Expense Entry Screen: Header: “Total Spent Today: ₹XXXX” (real-time indicator) Form fields: Title (text field, required) Amount (numeric field, required, ₹ prefix) Category (dropdown: Staff, Travel, Food, Utility) Notes (optional, max 100 chars, small text field) Receipt Image (upload button or image preview) Submit button: Rounded, primary color, with an add icon Smooth entry animation when an expense is added Light & dark theme previews 2. Expense List Screen: Default view: Today’s expenses in a scrollable list Filters: Date picker for previous days Group toggle: “By Category” / “By Time” Each expense card: Category icon, title, amount, date/time Top bar: Total expenses count + total amount Empty state illustration for no data 3. Expense Report Screen: Title: “Weekly Expense Report” Show daily totals in a bar or line chart (7 days) Category-wise totals Export button: PDF/CSV share button General Style: Clean, minimalist, and intuitive Use a soft color palette with clear category color-coding Consistent rounded corners (8–12px) Icons for categories (Staff, Travel, Food, Utility) Apply Material Design typography hierarchy Include both light mode and dark mode Output: Mobile screen mockups in portrait mode Show all three screens side-by-side Provide clickable prototype flow from entry → list → report"
+- Design a modern mobile app UI in Material You style for a “Smart Daily Expense Tracker” targeted at small business owners. The app should have three main screens: 1. Expense Entry Screen: Header: “Total Spent Today: ₹XXXX” (real-time indicator) Form fields: Title (text field, required) Amount (numeric field, required, ₹ prefix) Category (dropdown: Staff, Travel, Food, Utility) Notes (max 100 chars, small text field) Receipt Image (upload button or image preview) Submit button: Rounded, primary color, with an add icon Smooth entry animation when an expense is added Light & dark theme previews 2. Expense List Screen: Default view: Today’s expenses in a scrollable list Filters: Date picker for previous days Group toggle: “By Category” / “By Time” Each expense card: Category icon, title, amount, date/time Top bar: Total expenses count + total amount Empty state illustration for no data 3. Expense Report Screen: Title: “Weekly Expense Report” Show daily totals in a bar or line chart (7 days) Category-wise totals Export button: PDF/CSV share button General Style: Clean, minimalist, and intuitive Use a soft color palette with clear category color-coding Consistent rounded corners (8–12px) Icons for categories (Staff, Travel, Food, Utility) Apply Material Design typography hierarchy Include both light mode and dark mode Output: Mobile screen mockups in portrait mode Show all three screens side-by-side Provide clickable prototype flow from entry → list → report"
 - Compose a form to add an expense with fields: Title, Amount (₹ prefix), Category (Staff, Travel, Food, Utility), Notes (<=100 chars), and a mocked “Upload Receipt” button. Include validation states and a primary submit button with a subtle press animation.
+- Set up a bottom bar NavHost with three destinations: Entry, List, Report. Use route constants, restore state when switching tabs, and make Entry the start destination. Provide a concise example with `NavigationBarItem`s.
 
 ### Checklist of Features Implemented
 - Expense Entry Screen
@@ -45,7 +46,19 @@ The app includes three screens: Expense Entry, Expense List with grouping/filter
   - [x] Hilt DI for repository and database/DAO
   - [x] Jetpack Compose UI and Navigation with a bottom bar across three screens
 
-### Notes / Polishing Items
-- Align the category constant to exactly [Staff, Travel, Food, Utility].
-- Unify currency to ₹ across all UI using a single constant.
-- Consider local timezone day boundaries for the “today” query, or switch to start/end-of-day range filtering from Kotlin.
+## 📥 APK Download
+
+You can download the latest APK for **Smart Daily Expense Tracker** here:  
+[Download APK v1.0.0](https://github.com/animeshmandal4400/Smart_Daily_Expense_Tracker/releases/download/v1.0.0/expense_tracker.apk)
+
+Install this APK on your Android device to try out the app without building it yourself.
+
+## Screenshots
+<img width="474" height="1016" alt="image" src="https://github.com/user-attachments/assets/c4a3914d-12c9-485f-8eaa-ff6fa0249b29" />
+<img width="470" height="1022" alt="image" src="https://github.com/user-attachments/assets/559cfd60-f0c9-48ba-8b78-545000ce4079" />
+<img width="478" height="1018" alt="image" src="https://github.com/user-attachments/assets/96374812-e2bd-4827-acac-09fea01234a5" />
+<img width="476" height="1016" alt="image" src="https://github.com/user-attachments/assets/d57272a1-73fb-4efb-bcc5-0b526e19003b" />
+
+
+
+
