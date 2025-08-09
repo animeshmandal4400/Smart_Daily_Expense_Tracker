@@ -44,3 +44,10 @@ The app includes three screens: Expense Entry, Expense List with grouping/filter
   - [x] Repository abstraction
   - [x] Hilt DI for repository and database/DAO
   - [x] Jetpack Compose UI and Navigation with a bottom bar across three screens
+
+## 📥 APK Download
+
+You can download the latest APK for **Smart Daily Expense Tracker** here:  
+[Download APK v1.0.0](https://github.com/animeshmandal4400/Smart_Daily_Expense_Tracker/releases/download/v1.0.0/expense_tracker.apk)
+
+Install this APK on your Android device to try out the app without building it yourself.
