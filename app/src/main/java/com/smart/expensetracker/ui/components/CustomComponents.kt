@@ -18,9 +18,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.painter.Painter
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
@@ -52,7 +54,7 @@ fun PrimaryButton(
         modifier = modifier.fillMaxWidth(),
         enabled = enabled,
         colors = ButtonDefaults.buttonColors(
-            containerColor = if (enabled) PrimaryBlue else LightGrey,
+            containerColor = if (enabled) Black else LightGrey,
             disabledContainerColor = LightGrey
         ),
         shape = RoundedCornerShape(12.dp)
@@ -448,6 +450,7 @@ fun TopBar(
     onRefresh: () -> Unit,
     modifier: Modifier = Modifier
 ) {
+    var isDarkMode by remember { mutableStateOf(false) }
     Column(modifier = modifier) {
         Row(
             modifier = Modifier
@@ -462,13 +465,20 @@ fun TopBar(
                 fontWeight = FontWeight.Bold,
                 color = Black
             )
-            IconButton(onClick = onRefresh) {
+            IconButton(onClick = { isDarkMode = !isDarkMode }) {
+                val iconVector = if (isDarkMode) {
+                    ImageVector.vectorResource(id = R.drawable.night)
+                } else {
+                    ImageVector.vectorResource(id = R.drawable.day)
+                }
+
                 Icon(
-                    Icons.Default.Refresh,
-                    contentDescription = "Refresh",
+                    imageVector = iconVector,
+                    contentDescription = if (isDarkMode) "Switch to Light Mode" else "Switch to Dark Mode",
                     tint = Black
                 )
             }
+
         }
         
         // Grey spacer below header
@@ -626,11 +636,11 @@ fun ViewTypeButton(
         modifier = modifier.height(36.dp),
         shape = RoundedCornerShape(18.dp),
         colors = ButtonDefaults.outlinedButtonColors(
-            containerColor = if (isSelected) PrimaryBlue else White
+            containerColor = if (isSelected) Black else White
         ),
-        border = androidx.compose.foundation.BorderStroke(
+        border = BorderStroke(
             width = 1.dp,
-            color = if (isSelected) PrimaryBlue else LightGrey
+            color = if (isSelected) Black else LightGrey
         ),
         contentPadding = PaddingValues(horizontal = 10.dp, vertical = 0.dp)
     ) {
@@ -1004,26 +1014,7 @@ fun CategoryBreakdownChart(
                     color = Black
                 )
             }
-            
             Spacer(modifier = Modifier.height(16.dp))
-            
-            // Donut chart placeholder
-            Box(
-                modifier = Modifier
-                    .size(120.dp)
-                    .background(LightGrey, RoundedCornerShape(60.dp))
-                    .align(Alignment.CenterHorizontally),
-                contentAlignment = Alignment.Center
-            ) {
-                Text(
-                    text = "Chart",
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = TextGrey
-                )
-            }
-            
-            Spacer(modifier = Modifier.height(16.dp))
-            
             // Category list
             Column(
                 verticalArrangement = Arrangement.spacedBy(8.dp)

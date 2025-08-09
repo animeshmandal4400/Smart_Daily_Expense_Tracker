@@ -233,15 +233,6 @@ fun ExpenseEntryScreen(
             Spacer(modifier = Modifier.height(16.dp))
         }
     }
-
-    if (uiState.showToast) {
-        Toast.makeText(
-            context,
-            "Expense added successfully!",
-            Toast.LENGTH_SHORT
-        ).show()
-    }
-
     if (uiState.showImagePicker) {
         ImagePickerDialog(
             onDismiss = viewModel::hideImagePicker,
