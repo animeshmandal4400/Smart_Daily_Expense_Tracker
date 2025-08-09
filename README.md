@@ -53,6 +53,9 @@ You can download the latest APK for **Smart Daily Expense Tracker** here:
 
 Install this APK on your Android device to try out the app without building it yourself.
 
+## My Resume
+[Download My Resume](https://drive.google.com/file/d/1tSOjOVspzKHMibBGTa609lGNG36ywvy7/view?usp=sharing)
+
 ## Screenshots
 <img width="474" height="1016" alt="image" src="https://github.com/user-attachments/assets/c4a3914d-12c9-485f-8eaa-ff6fa0249b29" />
 <img width="470" height="1022" alt="image" src="https://github.com/user-attachments/assets/559cfd60-f0c9-48ba-8b78-545000ce4079" />
