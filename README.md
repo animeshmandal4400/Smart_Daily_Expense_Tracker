@@ -52,3 +52,13 @@ You can download the latest APK for **Smart Daily Expense Tracker** here:
 [Download APK v1.0.0](https://github.com/animeshmandal4400/Smart_Daily_Expense_Tracker/releases/download/v1.0.0/expense_tracker.apk)
 
 Install this APK on your Android device to try out the app without building it yourself.
+
+## Screenshots
+<img width="474" height="1016" alt="image" src="https://github.com/user-attachments/assets/c4a3914d-12c9-485f-8eaa-ff6fa0249b29" />
+<img width="470" height="1022" alt="image" src="https://github.com/user-attachments/assets/559cfd60-f0c9-48ba-8b78-545000ce4079" />
+<img width="478" height="1018" alt="image" src="https://github.com/user-attachments/assets/96374812-e2bd-4827-acac-09fea01234a5" />
+<img width="476" height="1016" alt="image" src="https://github.com/user-attachments/assets/d57272a1-73fb-4efb-bcc5-0b526e19003b" />
+
+
+
+
